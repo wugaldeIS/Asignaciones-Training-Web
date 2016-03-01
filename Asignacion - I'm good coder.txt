@@ -1,0 +1,281 @@
+
+/*==============================================
+	Asignaciones I'm good coder
+==============================================*/
+
+// Ejemplos donde haya aplicado las buenas prácticas
+
+/*
+EJEMPLO # 1
+	El ejemplo 1 muestra el principio de que un metodo solo tiene una 
+	y solo una responsabilidad. 
+	En este caso el metodo obtenerInformacionMenuStr() lee la opcion 
+	elegida por el usuario en el menu y la retorna.
+*/
+private String obtenerInformacionMenuStr() {
+    Scanner scanner = new Scanner(System.in);
+    return scanner.nextLine();
+}
+
+/*
+EJEMPLO # 2
+	El ejemplo 2 muestra el principo del uso de nombres significativos.
+	El metodo crearClientesJuridicos(), como su nombre lo indica es el 
+	encargado de crear los clientes juridicos en el sistema.
+*/
+private static void crearClientesJuridicos(String pRazonSocial, String pTipoNegocio) {  
+    Juridico clienteJuridico = new Juridico(pRazonSocial,pTipoNegocio);
+    clientesCreados.add(clienteJuridico);
+}
+
+/*
+EJEMPLO # 3
+	El ejemplo 3 muestra el principo de encapsulamiento en el codigo.
+	De esta manera la unica manera de obtener informacion acerca de la 
+	informacion de la fecha de registro es mediante el uso del metodo getFechaRegistro(), 
+	sin detalles de como este metodo obtiene esta informacion.
+*/
+public Date getFechaRegistro(){
+    return fechaRegistro;
+}
+
+/*
+EJEMPLO # 4
+	En el ejemplo 4 se muestra como se maneja la verificacion de datos que provienen 
+	mediante parametros. Se valida que el objeto de tipo Cuenta no sea un objeto nulo,
+	de manera que si es nulo notifique al usuario mediante un mensaje de error.
+*/
+private static void asignarClienteACuenta(Cuenta pCuenta, Cliente pCodigoCliente) {
+        if(pCuenta != null){
+            Cliente cliente = buscarCliente(pCodigoCliente,clientesCreados);
+            
+            if(cliente != null){            
+                cuenta.setCliente(cliente);
+            } else {
+                imprimirMensaje("El numero de cliente ingresado no corresponde a los clientes creados en el sistema");
+            }
+
+        } else {
+            imprimirMensaje("El numero de cuenta ingresado no corresponde a ninguna de las cuentas creadas en el sistema");
+        }
+    }
+
+/*
+EJEMPLO # 5
+	En el ejemplo 5 se muestra como se sigue un formato claro en el cual es posible
+	comprender de manera simple la clase.
+	El espacio entre atributos, constructor y metodos, mejora la comprension visual de
+	todo con lo que cuenta la clase Usuario.
+*/
+public class Usuario {
+
+    private String nombre;
+    private String apellido1;
+    private String appellido2;
+    private String password;
+    private String correo;
+
+    public void Usuario (String pNombre, String pApellido1, String pApellido2) {
+    	nombre = pNombre;
+    	apellido1 = pApellido1;
+    	appellido2 = pApellido2;
+    }
+
+    // =========== SETTERS ==============
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setApellido1(String apellido1) {
+        this.apellido1 = apellido1;
+    }
+
+    public void setAppellido2(String appellido2) {
+        this.appellido2 = appellido2;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    // =========== GETTERS ==============
+    public String getNombre () {
+        return nombre;
+    }
+
+    public String getApellido1() {
+        return apellido1;
+    }
+
+    public String getAppellido2() {
+        return appellido2;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+}
+
+
+
+//*****************************************************************************************
+/* Ejemplos de casos donde no haya aplicado las buenas prácticas de programación estudiadas
+   y la correccion correspondiente
+*/
+
+/*
+EJEMPLO # 1
+  El metodo hacerDeposito() aunque sea un metodo simple esta realizando mas de una funcion.
+  En este caso aparte de realizar el deposito en la cuenta, está creando un objeto de tipo
+  Movimiento y agregandolo a la coleccion de movimientos del sistema. */
+
+public String hacerDeposito(double pMonto){
+    Movimiento mov = new Movimiento("Deposito",pMonto);
+    this.movimientos.add(mov);
+    this.saldo += pMonto;
+    return "El deposito fue realizado con éxito";
+}
+
+/* ------ CORRECCION EJEMPLO #1
+	De esta manera ya el metodo hacerDeposito() solo tiene la funcion de realizar el deposito,
+	y el metodo agregarNuevoMovimiento() sera quien se encargue de agregar el nuevo movimiento 
+	a la coleccion de movimientos del sistema.
+*/
+public String hacerDeposito(double pMonto){
+	agregarNuevoMovimiento("Deposito",pMonto);
+    this.saldo += pMonto;
+    return "El deposito fue realizado con éxito";
+}
+
+private agregarNuevoMovimiento (String pTipoMovimiento, double pMonto) {
+	Movimiento mov = new Movimiento(pTipoMovimiento,pMonto);
+    this.movimientos.add(mov);
+}
+
+/*
+EJEMPLO # 2
+	En la clase se presentan muchos atributos con modificador de acceso publico,
+	esto hace posible el acceso de estos datos sin un mejor manejo sobre ellos.
+*/
+public class PaquetesConLogin {
+
+    public String nombreOpcion;
+    public String IdUsuario;
+    public String nombreUsuario;
+
+    /*
+		.
+		.
+		.
+    */
+
+}
+
+/* ------ CORRECCION EJEMPLO #2
+	Con el cambio del modificador de acceso en estos atributos y la creacion de 
+	metodos getters y setters se mejora en cuanto al principio de encapsulamiento.
+	Ademas se controla el acceso a estos atributos.	
+*/
+public class PaquetesConLogin {
+
+    private String nombreOpcion;
+    private String IdUsuario;
+    private String nombreUsuario;
+
+    public void setNombreOpcion (String pNombreOpcion){
+    	nombreOpcion = pNombreOpcion;
+    }
+
+    public String getNombreOpcion (){
+    	return nombreOpcion;
+    }
+
+    public void setIdUsuario (String pIdUsuario){
+    	IdUsuario = pIdUsuario;
+    }
+
+    public String getIdUsuario(){
+    	return IdUsuario;
+    }
+
+    public void setNombreUsuario (String pNombreUsuario){
+    	nombreUsuario = pNombreUsuario;
+    }
+
+    public String getNombreUsuario (){
+    	return nombreUsuario;
+    }
+
+}
+
+
+/*
+EJEMPLO # 3
+	En el metodo no se hace una validacion de si el objeto es nulo, o es valido.
+*/
+public static void consultarInfoCliente(Cliente pCliente){                
+    consulta = pCliente.toString();
+    System.out.println(consulta);
+}
+
+/* ------ CORRECCION EJEMPLO #3
+	Se agrego el manejo de la validacion mediante el try y catch.	
+*/
+public static void consultarInfoCliente(Cliente pCliente){        
+    try{
+        consulta = pCliente.toString();
+        System.out.println(consulta);
+    } catch (IOException exception) {
+    	System.err.println("Error en el parametro. " + exception.getMessage());
+	}
+    
+}
+
+
+/*
+EJEMPLO # 4
+	El nombre del metodo no es un nombre significativo, no indica a que o
+	quien se modificara el valor
+*/
+public void modificarValor(String NombreId, int Tipo, ElementosArray Valor,int pTipoAlmancedo, ArrayList<Integer> arrayDimensiones){
+	Simbolos elemento = busqueda(NombreId);
+	if (elemento != null){
+		elemento.setCodigoTipo(Tipo);
+		elemento.setValorIni(Valor);
+		elemento.setTipoAlmacenado(pTipoAlmancedo);
+		elemento.setTamArreglo(arrayDimensiones);
+	}else{
+		System.out.println("El id " + '\'' +NombreId+ '\'' + " no se encuentra declarado");
+	}
+}
+
+/* ------ CORRECCION EJEMPLO #4
+	
+*/
+public void modificarValorSimbolo(String NombreId, int Tipo, ElementosArray Valor,int pTipoAlmancedo, ArrayList<Integer> arrayDimensiones){
+	Simbolos elemento = busqueda(NombreId);
+	if (elemento != null){
+		elemento.setCodigoTipo(Tipo);
+		elemento.setValorIni(Valor);
+		elemento.setTipoAlmacenado(pTipoAlmancedo);
+		elemento.setTamArreglo(arrayDimensiones);
+	}else{
+		System.out.println("El id " + '\'' +NombreId+ '\'' + " no se encuentra declarado");
+	}
+}
+
+/*
+EJEMPLO # 5
+*/
+/* ------ CORRECCION EJEMPLO #5
+	
+*/
+
