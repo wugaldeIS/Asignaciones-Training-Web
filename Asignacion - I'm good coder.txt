@@ -1,4 +1,4 @@
-
+﻿
 /*==============================================
 	Asignaciones I'm good coder
 ==============================================*/
@@ -274,8 +274,140 @@ public void modificarValorSimbolo(String NombreId, int Tipo, ElementosArray Valo
 
 /*
 EJEMPLO # 5
+	En la clase no se cuenta con comentarios acerca de su utilidad, datos, etc.
 */
-/* ------ CORRECCION EJEMPLO #5
-	
+
+public class Tokens {
+    private int CodigoFamilia, CodigoError, Fila, Columna_Inicial, Columna_Final;
+    private String Lexema;
+
+    public Tokens(int CodigoFamilia, int CodigoError, int Fila, int Columna_Inicial, int Columna_Final, String Lexema) {
+        this.CodigoFamilia = CodigoFamilia;
+        this.CodigoError = CodigoError;
+        this.Fila = Fila;
+        this.Columna_Inicial = Columna_Inicial;
+        this.Columna_Final = Columna_Final;
+        this.Lexema = Lexema;
+    }
+
+	public int getCodigoFamilia() {
+		return CodigoFamilia;
+	}
+
+	public void setCodigoFamilia(int codigoFamilia) {
+		CodigoFamilia = codigoFamilia;
+	}
+
+	public int getCodigoError() {
+		return CodigoError;
+	}
+
+	public void setCodigoError(int codigoError) {
+		CodigoError = codigoError;
+	}
+
+	public int getFila() {
+		return Fila;
+	}
+
+	public void setFila(int fila) {
+		Fila = fila;
+	}
+
+	public int getColumna_Inicial() {
+		return Columna_Inicial;
+	}
+
+	public void setColumna_Inicial(int columna_Inicial) {
+		Columna_Inicial = columna_Inicial;
+	}
+
+	public int getColumna_Final() {
+		return Columna_Final;
+	}
+
+	public void setColumna_Final(int columna_Final) {
+		Columna_Final = columna_Final;
+	}
+
+	public String getLexema() {
+		return Lexema;
+	}
+
+	public void setLexema(String lexema) {
+		Lexema = lexema;
+	}    
+}
+
+
+/* ------ CORRECCION EJEMPLO #5	
 */
+
+/*
+	La clase Tokens se encarga de contener la informacion necesaria para el funcionamiento del
+	del analizador lexico, sintactico, y semantico.
+	En cada token se presentara el codigo de familia, lexema, codigo error, fila en el que se encuentra,
+	columna de inicio, columna final, etc.
+*/
+public class Tokens {
+    private int CodigoFamilia, CodigoError, Fila, Columna_Inicial, Columna_Final;
+    private String Lexema;
+
+    public Tokens(int CodigoFamilia, int CodigoError, int Fila, int Columna_Inicial, int Columna_Final, String Lexema) {
+        this.CodigoFamilia = CodigoFamilia;
+        this.CodigoError = CodigoError;
+        this.Fila = Fila;
+        this.Columna_Inicial = Columna_Inicial;
+        this.Columna_Final = Columna_Final;
+        this.Lexema = Lexema;
+    }
+
+	public int getCodigoFamilia() {
+		return CodigoFamilia;
+	}
+
+	public void setCodigoFamilia(int codigoFamilia) {
+		CodigoFamilia = codigoFamilia;
+	}
+
+	public int getCodigoError() {
+		return CodigoError;
+	}
+
+	public void setCodigoError(int codigoError) {
+		CodigoError = codigoError;
+	}
+
+	public int getFila() {
+		return Fila;
+	}
+
+	public void setFila(int fila) {
+		Fila = fila;
+	}
+
+	public int getColumna_Inicial() {
+		return Columna_Inicial;
+	}
+
+	public void setColumna_Inicial(int columna_Inicial) {
+		Columna_Inicial = columna_Inicial;
+	}
+
+	public int getColumna_Final() {
+		return Columna_Final;
+	}
+
+	public void setColumna_Final(int columna_Final) {
+		Columna_Final = columna_Final;
+	}
+
+	public String getLexema() {
+		return Lexema;
+	}
+
+	public void setLexema(String lexema) {
+		Lexema = lexema;
+	}  
+}
 
