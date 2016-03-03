@@ -10,14 +10,14 @@ h2 {
 	text-align: center;
 }
 
-section {
+article {
 	padding: 30px;
 	width: 830px;
 	overflow: hidden;
 	border: 1px solid #000000;
 }
 
-article {
+section {
 	margin-right: 38px;
 	margin-left: 38px;
 	width: 200px;
