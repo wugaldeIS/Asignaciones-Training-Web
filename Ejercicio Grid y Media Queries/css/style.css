@@ -1,0 +1,132 @@
+/*!
+ * All Rights Reserved
+ * This software is proprietary information of
+ * Intelligent Sense
+ * Use is subject to license terms.
+ * Filename: style.css
+ */
+
+.row {
+	padding: 0 5%;
+}
+
+h2 {
+	text-align: center;
+}
+
+article {
+	padding: 30px;
+	width: 80%;
+	border: 1px solid #000000;
+	margin-top: 8%;
+}
+
+section {
+	width: 200px;
+	height: 300px;
+}
+
+#facebook {
+	background-color: #154eb8;
+}
+
+#instagram {
+	background-color: #ab8934;
+}
+
+#twitter {
+	background-color: #4eb5ff;
+}
+
+p {
+	padding: 5px 10px;
+	color: #ffffff;
+}
+
+#facebook p {
+	font-family: 'Lato', sans-serif;
+}
+
+#instagram p {
+	font-family: Arial, sans-serif;
+}
+
+#twitter p {
+	font-family: Verdana, sans-serif;
+	font-size: 14px;
+}
+
+#img-facebook {
+	width: 51px;
+	height: 50px;
+	background: url('../imgs/social-media-icons-css-sprite.png') no-repeat -60px -62px;
+}
+
+#img-facebook:hover {
+	background: url('../imgs/social-media-icons-css-sprite.png') no-repeat -60px -5px;
+}
+
+#img-instagram {
+	width: 51px;
+	height: 50px;
+	background: url('../imgs/social-media-icons-css-sprite.png') no-repeat -117px -62px;
+}
+
+#img-instagram:hover {
+	background: url('../imgs/social-media-icons-css-sprite.png') no-repeat -117px -5px;
+}
+
+#img-twitter {
+	width: 51px;
+	height: 50px;
+	background: url('../imgs/social-media-icons-css-sprite.png') no-repeat -3px -62px;
+}
+
+#img-twitter:hover {
+	background: url('../imgs/social-media-icons-css-sprite.png') no-repeat -3px -5px;
+}
+
+@media screen and (max-width: 767px) {
+
+	#facebook {
+		background-color: #782740;
+	}
+
+	#instagram {
+		background-color: #782740;
+	}
+
+	#twitter {
+		background-color: #782740;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 990px) {
+
+	#facebook {
+		background-color: #f42929;
+	}
+
+	#instagram {
+		background-color: #f42929;
+	}
+
+	#twitter {
+		background-color: #f42929;
+	}
+}
+
+@media screen and (min-width: 991px) and (max-width: 1198px) {
+
+	#facebook {
+		background-color: #27782d;
+	}
+
+	#instagram {
+		background-color: #27782d;
+	}
+
+	#twitter {
+		background-color: #27782d;
+	}
+}
