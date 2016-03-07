@@ -1,0 +1,62 @@
+
+@mixin border-radius($border : 5px) {
+	-webkit-border-radius: $border; 
+	-moz-border-radius: $border; 
+	-o-border-radius: $border; 
+	-ms-border-radius: $border; 
+	border-radius: $border; 
+}
+
+@mixin set_header_properties ($color, $size, $font-fam: Arial) {
+	-webkit-padding-bottom: 15px;
+	-moz-padding-bottom: 15px;
+	-o-padding-bottom: 15px;
+	-ms-padding-bottom: 15px;
+
+	-webkit-font-size: $size;
+	-moz-font-size: $size;
+	-o-font-size: $size;
+	-ms-font-size: $size;
+
+	-webkit-color: $color;
+	-moz-color: $color;
+	-o-color: $color;
+	-ms-color: $color;
+
+	-webkit-font-family: $font-fam, sans-serif, serif;
+	-moz-font-family: $font-fam, sans-serif, serif;
+	-o-font-family: $font-fam, sans-serif, serif;
+	-ms-font-family: $font-fam, sans-serif, serif;
+
+	padding-bottom: 15px;
+	font-size: $size;
+	color: $color;
+	font-family: $font-fam, sans-serif, serif;
+}
+
+@mixin set_paragraph_properties ($color, $size, $font-fam: Arial) {
+	-webkit-padding-bottom: 10px;
+	-moz-padding-bottom: 10px;
+	-o-padding-bottom: 10px;
+	-ms-padding-bottom: 10px;
+
+	-webkit-font-size: $size;
+	-moz-font-size: $size;
+	-o-font-size: $size;
+	-ms-font-size: $size;
+
+	-webkit-color: $color;
+	-moz-color: $color;
+	-o-color: $color;
+	-ms-color: $color;
+
+	-webkit-font-family: $font-fam, sans-serif, serif;
+	-moz-font-family: $font-fam, sans-serif, serif;
+	-o-font-family: $font-fam, sans-serif, serif;
+	-ms-font-family: $font-fam, sans-serif, serif;
+
+	padding-bottom: 10px;
+	font-size: $size;
+	color: $color;
+	font-family: $font-fam, sans-serif, serif;
+}

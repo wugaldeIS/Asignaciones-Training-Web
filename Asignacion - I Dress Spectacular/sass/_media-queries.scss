@@ -1,0 +1,87 @@
+@media screen and (max-width: 600px) {
+	.container-header{
+		header {
+			height: 80px;
+			width: 90%;
+			padding-top: 20px;
+			//margin-bottom: 200px;
+			
+			
+			
+			nav {
+				width: 100%;
+				right: 0;
+				top: 0;
+				border: {
+					top: none;
+					bottom: none;
+				}
+				//float: none;
+				
+				margin-top: 80px;
+				padding: 0;
+
+				ul {
+					margin: 0;
+					padding: 0;
+					float: none;
+
+					li {
+						margin: 0;
+						font-size: 16px;
+						font-family: Verdana, sans-serif;
+						color: $gray;
+						float: none;
+						border-bottom: 1px solid $gray;
+						padding: 12px 0;
+					}
+				}
+
+			}
+		}
+
+
+		.header-section {
+			margin-top: 290px; 
+			border-bottom: 1px solid $gray;
+			line-height: 20px;
+
+			h1 {
+				margin: 35px 0 25 0;
+				font-size: 20px;
+				padding: 10px;
+				line-height: 25px;
+
+				span {
+					font-size: 18px;
+				}
+			}
+
+			p {
+				font-size: 14px;
+				padding-bottom: 15px;
+			}
+		}
+	}
+
+
+	.container {
+		width: 100%;
+		.section {
+
+			img {
+				max-width: 335px;
+				max-height: 300px;
+				height: 50%;
+				width: 90%;
+			}
+		}
+	}
+
+	footer {
+		.footer1 {
+			font-size: 0;
+		}
+	}
+
+}

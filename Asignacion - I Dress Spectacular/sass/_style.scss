@@ -1,0 +1,207 @@
+@import "compass/reset";
+@import "_mixins";
+
+
+$white: #FFF;
+$black: #000;
+$gray:	#ccc;
+$red:	#F00;
+
+body {
+	margin: 0 auto;
+	width: 100%;
+	background: {
+		image: url("../imgs/bg.png");
+		repeat: all;
+	}
+}
+
+ .header-bar {
+	margin-top: -5px;
+	height: 15px;
+	width: 100%;
+	background-color: $black;
+}
+
+.container-header {
+	margin: 0 auto; 
+	padding: 0 20px;
+	max-width: 1200px;
+	
+	header {
+		height: 60px;
+		margin-top: 15px;
+		position: relative;
+
+		img {
+			height: 43px;
+			width: 180px;
+		}
+		
+		nav {
+			position: absolute;
+			right: 45px;
+			top: 20px;
+			border: {
+				top: 1px solid $gray;
+				bottom: 1px solid #c2c2c2;
+			}
+			//float: left;
+			
+			padding: 10px 3px 10px 8px;
+
+			li {
+				margin: 0 15px 0 1px;
+				font-size: 18px;
+				font-family: Arial, sans-serif;
+				color: $gray;
+				float: left;
+			}
+
+		}
+	}
+
+	.header-section {
+		margin:  20px 0 15px 0;
+		border-bottom: 1px solid $gray;
+
+		h1 {
+			font-size: 45px;
+			color: $gray;
+			margin: 25px 0;
+
+			span {
+				font-size: 25px;
+			}
+		}
+
+		p {
+			font-size: 12px;
+			padding-bottom: 8px;
+		}
+	}
+
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0;
+	max-width: 1200px;
+
+	section {
+		float: left;
+		margin: 20px 0;
+		padding: 20px 20px 20px 0;
+
+		h2 {
+			@include set_header_properties($red, 20px);
+		}
+
+		p {
+			margin-bottom: 15px;
+			line-height: 20px;
+		}
+
+		img {
+			border: 1px solid $gray;
+			background-color: $white;
+			margin: 5px 5px;
+			padding: 7px;
+			max-width: 95%;
+			height: auto;
+			float: left;
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+
+		button {
+			@include border-radius(4px);
+			border: 0;
+			padding: 5px 12px;
+			width: 100px;
+			height: 33px;
+			font-family: Arial, sans-serif;
+			font-size: 12px;
+			background-color: $black;
+			color: $white;
+			
+			&:hover {
+				opacity: 0.7;
+			}
+
+		}
+
+	}
+
+
+	.article {
+		margin-top: 15px; 
+		border-top: 1px solid $gray;
+		padding-top: 25px; 
+
+		h2 {
+			@include set_header_properties($red, 20px, Arial);
+			padding-bottom: 25px;
+		}
+
+		h4 {
+			@include set_header_properties(#444, 12px ,Verdana);
+
+		}
+
+		p {
+			@include set_paragraph_properties($black, 12px, Arial);
+			line-height: 18px;
+		}
+		
+		.article-section {
+			margin: 20px 0;
+			border: 1px solid $gray; 
+			padding: 35px 55px;
+
+			p {
+				color: $red;
+			}
+
+		}
+
+	}
+
+
+}
+
+footer {
+	position: relative;
+	margin-top: 15px;
+	padding-top: 35px; 
+	height: 90px;
+	width: 100%;
+	background-color: $black;
+	color: $white; 
+	font-size: 12px;
+	font-family: Verdana, sans-serif;
+
+	.footer1 {
+		position: absolute;
+		margin-left: 70px;
+	}
+
+	.footer2 {
+		position: absolute;
+		right: 110px;	
+	}
+
+	a {
+		color: #6F7D70;
+		text-decoration: underline;
+		&:hover {
+			color: #241A1A;
+		}
+	}
+
+
+}
+
+

@@ -1,0 +1,403 @@
+/* line 5, C:/Ruby2.2.4/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby2.2.4/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby2.2.4/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby2.2.4/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby2.2.4/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby2.2.4/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby2.2.4/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby2.2.4/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby2.2.4/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 10, ../sass/_style.scss */
+body {
+  margin: 0 auto;
+  width: 100%;
+  background-image: url("../imgs/bg.png");
+  background-repeat: all;
+}
+
+/* line 19, ../sass/_style.scss */
+.header-bar {
+  margin-top: -5px;
+  height: 15px;
+  width: 100%;
+  background-color: #000;
+}
+
+/* line 26, ../sass/_style.scss */
+.container-header {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+/* line 31, ../sass/_style.scss */
+.container-header header {
+  height: 60px;
+  margin-top: 15px;
+  position: relative;
+}
+/* line 36, ../sass/_style.scss */
+.container-header header img {
+  height: 43px;
+  width: 180px;
+}
+/* line 41, ../sass/_style.scss */
+.container-header header nav {
+  position: absolute;
+  right: 45px;
+  top: 20px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #c2c2c2;
+  padding: 10px 3px 10px 8px;
+}
+/* line 53, ../sass/_style.scss */
+.container-header header nav li {
+  margin: 0 15px 0 1px;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  color: #ccc;
+  float: left;
+}
+/* line 64, ../sass/_style.scss */
+.container-header .header-section {
+  margin: 20px 0 15px 0;
+  border-bottom: 1px solid #ccc;
+}
+/* line 68, ../sass/_style.scss */
+.container-header .header-section h1 {
+  font-size: 45px;
+  color: #ccc;
+  margin: 25px 0;
+}
+/* line 73, ../sass/_style.scss */
+.container-header .header-section h1 span {
+  font-size: 25px;
+}
+/* line 78, ../sass/_style.scss */
+.container-header .header-section p {
+  font-size: 12px;
+  padding-bottom: 8px;
+}
+
+/* line 86, ../sass/_style.scss */
+.container {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+}
+/* line 91, ../sass/_style.scss */
+.container section {
+  float: left;
+  margin: 20px 0;
+  padding: 20px 20px 20px 0;
+}
+/* line 96, ../sass/_style.scss */
+.container section h2 {
+  -webkit-padding-bottom: 15px;
+  -moz-padding-bottom: 15px;
+  -o-padding-bottom: 15px;
+  -ms-padding-bottom: 15px;
+  -webkit-font-size: 20px;
+  -moz-font-size: 20px;
+  -o-font-size: 20px;
+  -ms-font-size: 20px;
+  -webkit-color: #F00;
+  -moz-color: #F00;
+  -o-color: #F00;
+  -ms-color: #F00;
+  -webkit-font-family: Arial, sans-serif, serif;
+  -moz-font-family: Arial, sans-serif, serif;
+  -o-font-family: Arial, sans-serif, serif;
+  -ms-font-family: Arial, sans-serif, serif;
+  padding-bottom: 15px;
+  font-size: 20px;
+  color: #F00;
+  font-family: Arial, sans-serif, serif;
+}
+/* line 100, ../sass/_style.scss */
+.container section p {
+  margin-bottom: 15px;
+  line-height: 20px;
+}
+/* line 105, ../sass/_style.scss */
+.container section img {
+  border: 1px solid #ccc;
+  background-color: #FFF;
+  margin: 5px 5px;
+  padding: 7px;
+  max-width: 95%;
+  height: auto;
+  float: left;
+}
+/* line 114, ../sass/_style.scss */
+.container section img:hover {
+  opacity: 0.8;
+}
+/* line 119, ../sass/_style.scss */
+.container section button {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  border: 0;
+  padding: 5px 12px;
+  width: 100px;
+  height: 33px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  background-color: #000;
+  color: #FFF;
+}
+/* line 130, ../sass/_style.scss */
+.container section button:hover {
+  opacity: 0.7;
+}
+/* line 139, ../sass/_style.scss */
+.container .article {
+  margin-top: 15px;
+  border-top: 1px solid #ccc;
+  padding-top: 25px;
+}
+/* line 144, ../sass/_style.scss */
+.container .article h2 {
+  -webkit-padding-bottom: 15px;
+  -moz-padding-bottom: 15px;
+  -o-padding-bottom: 15px;
+  -ms-padding-bottom: 15px;
+  -webkit-font-size: 20px;
+  -moz-font-size: 20px;
+  -o-font-size: 20px;
+  -ms-font-size: 20px;
+  -webkit-color: #F00;
+  -moz-color: #F00;
+  -o-color: #F00;
+  -ms-color: #F00;
+  -webkit-font-family: Arial, sans-serif, serif;
+  -moz-font-family: Arial, sans-serif, serif;
+  -o-font-family: Arial, sans-serif, serif;
+  -ms-font-family: Arial, sans-serif, serif;
+  padding-bottom: 15px;
+  font-size: 20px;
+  color: #F00;
+  font-family: Arial, sans-serif, serif;
+  padding-bottom: 25px;
+}
+/* line 149, ../sass/_style.scss */
+.container .article h4 {
+  -webkit-padding-bottom: 15px;
+  -moz-padding-bottom: 15px;
+  -o-padding-bottom: 15px;
+  -ms-padding-bottom: 15px;
+  -webkit-font-size: 12px;
+  -moz-font-size: 12px;
+  -o-font-size: 12px;
+  -ms-font-size: 12px;
+  -webkit-color: #444;
+  -moz-color: #444;
+  -o-color: #444;
+  -ms-color: #444;
+  -webkit-font-family: Verdana, sans-serif, serif;
+  -moz-font-family: Verdana, sans-serif, serif;
+  -o-font-family: Verdana, sans-serif, serif;
+  -ms-font-family: Verdana, sans-serif, serif;
+  padding-bottom: 15px;
+  font-size: 12px;
+  color: #444;
+  font-family: Verdana, sans-serif, serif;
+}
+/* line 154, ../sass/_style.scss */
+.container .article p {
+  -webkit-padding-bottom: 10px;
+  -moz-padding-bottom: 10px;
+  -o-padding-bottom: 10px;
+  -ms-padding-bottom: 10px;
+  -webkit-font-size: 12px;
+  -moz-font-size: 12px;
+  -o-font-size: 12px;
+  -ms-font-size: 12px;
+  -webkit-color: #000;
+  -moz-color: #000;
+  -o-color: #000;
+  -ms-color: #000;
+  -webkit-font-family: Arial, sans-serif, serif;
+  -moz-font-family: Arial, sans-serif, serif;
+  -o-font-family: Arial, sans-serif, serif;
+  -ms-font-family: Arial, sans-serif, serif;
+  padding-bottom: 10px;
+  font-size: 12px;
+  color: #000;
+  font-family: Arial, sans-serif, serif;
+  line-height: 18px;
+}
+/* line 159, ../sass/_style.scss */
+.container .article .article-section {
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  padding: 35px 55px;
+}
+/* line 164, ../sass/_style.scss */
+.container .article .article-section p {
+  color: #F00;
+}
+
+/* line 175, ../sass/_style.scss */
+footer {
+  position: relative;
+  margin-top: 15px;
+  padding-top: 35px;
+  height: 90px;
+  width: 100%;
+  background-color: #000;
+  color: #FFF;
+  font-size: 12px;
+  font-family: Verdana, sans-serif;
+}
+/* line 186, ../sass/_style.scss */
+footer .footer1 {
+  position: absolute;
+  margin-left: 70px;
+}
+/* line 191, ../sass/_style.scss */
+footer .footer2 {
+  position: absolute;
+  right: 110px;
+}
+/* line 196, ../sass/_style.scss */
+footer a {
+  color: #6F7D70;
+  text-decoration: underline;
+}
+/* line 199, ../sass/_style.scss */
+footer a:hover {
+  color: #241A1A;
+}
+
+@media screen and (max-width: 600px) {
+  /* line 3, ../sass/_media-queries.scss */
+  .container-header header {
+    height: 80px;
+    width: 90%;
+    padding-top: 20px;
+  }
+  /* line 11, ../sass/_media-queries.scss */
+  .container-header header nav {
+    width: 100%;
+    right: 0;
+    top: 0;
+    border-top: none;
+    border-bottom: none;
+    margin-top: 80px;
+    padding: 0;
+  }
+  /* line 24, ../sass/_media-queries.scss */
+  .container-header header nav ul {
+    margin: 0;
+    padding: 0;
+    float: none;
+  }
+  /* line 29, ../sass/_media-queries.scss */
+  .container-header header nav ul li {
+    margin: 0;
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+    color: #ccc;
+    float: none;
+    border-bottom: 1px solid #ccc;
+    padding: 12px 0;
+  }
+  /* line 44, ../sass/_media-queries.scss */
+  .container-header .header-section {
+    margin-top: 290px;
+    border-bottom: 1px solid #ccc;
+    line-height: 20px;
+  }
+  /* line 49, ../sass/_media-queries.scss */
+  .container-header .header-section h1 {
+    margin: 35px 0 25 0;
+    font-size: 20px;
+    padding: 10px;
+    line-height: 25px;
+  }
+  /* line 55, ../sass/_media-queries.scss */
+  .container-header .header-section h1 span {
+    font-size: 18px;
+  }
+  /* line 60, ../sass/_media-queries.scss */
+  .container-header .header-section p {
+    font-size: 14px;
+    padding-bottom: 15px;
+  }
+
+  /* line 68, ../sass/_media-queries.scss */
+  .container {
+    width: 100%;
+  }
+  /* line 72, ../sass/_media-queries.scss */
+  .container .section img {
+    max-width: 335px;
+    max-height: 300px;
+    height: 50%;
+    width: 90%;
+  }
+
+  /* line 82, ../sass/_media-queries.scss */
+  footer .footer1 {
+    font-size: 0;
+  }
+}
