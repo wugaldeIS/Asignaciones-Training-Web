@@ -1,0 +1,89 @@
+//
+// * All Rights Reserved
+// * This software is proprietary information of
+// * Intelligent Sense
+// * Use is subject to license terms.
+// * Filename: _general.scss
+//
+
+// *
+// * Author:      wugalde@intelligentsense.com
+// * Date:        12/03/2016
+// * Description: General partial.
+// 
+
+/* ===================
+    ALL: Variables
+   =================== */
+$black : #000;
+$blue : #00c;
+
+body {
+    width: 100%;
+
+    #container {
+        margin: 0 auto;
+        width: 90%;
+
+        h1 {
+            font-family: Verdana, sans-serif;
+            font-size: 24px;    
+            margin-bottom: 10px;    
+        }
+
+        .user-container {
+            border: 2px solid $black;
+            margin-bottom: 20px;
+            padding: 5px;
+            display: inline-block;
+            overflow: hidden;
+            clear: both;
+            @include borderRadius(3px);
+
+            .user-image {
+                padding: 10px;
+                width: 100px;
+                height: 80%;
+                float: left;    
+                position: relative;
+                
+                button {
+                    border: 1px solid $black; 
+                    padding: 2px;
+                    @include borderRadius(7px);
+                    width: 70px;
+                    position: absolute;
+                    bottom: 8px;
+                    right: 25px;
+                    font-family: Verdana, sans-serif;
+                }
+
+                h2 {
+                    font-size: 20px;
+                    color: $blue;
+                    position: absolute;
+                    right: 12px;
+                    top: 10px;
+                }
+
+                img {
+                    @include borderRadius(5px);
+                    height: 100px;
+                    width: 100px;
+                }
+            }
+
+            .user-information {
+                margin-left: 5px;
+                padding: 10px 0 10px 10px;
+                width: 60%;
+                height: 80%;
+                float: left;
+
+                td {
+                    padding: 12px 5px 10px 30px; 
+                }
+            }
+        }   
+    }
+}

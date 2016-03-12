@@ -1,0 +1,38 @@
+{{!--
+/*!
+ * All Rights Reserved
+ * This software is proprietary information of
+ * Intelligent Sense
+ * Use is subject to license terms.
+ * Filename: template.handlebars
+ */
+--}}
+
+{{#each users}}
+	<h1>{{Name}}</h1>
+	<div class="user-container">
+		<div class="user-image">
+			<h2>{{plusOne @index}}</h2>
+			<img src="{{Profile}}" />
+			<button class="showButton" id="btn_show_{{plusOne @index}}">Show</button>
+			<button class="hideButton" id="btn_hide_{{plusOne @index}}">Hide</button>
+		</div>
+		<div class="user-information" id="information_{{plusOne @index}}">
+			<table>
+				<tr>
+					<td>Tweets:</td>
+					<td>{{Tweets}}</td>
+				</tr>
+				<tr>
+					<td>Followers:</td>
+					<td>{{Followers}}</td>
+				</tr>
+				<tr>
+					<td>Retweets:</td>
+					<td>{{ReTweets}}</td>
+					<td><a href="https://twitter.com/account/redirect_by_id/{{plusOne @index}}" target="_blank">[handle]</a></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+{{/ each}}

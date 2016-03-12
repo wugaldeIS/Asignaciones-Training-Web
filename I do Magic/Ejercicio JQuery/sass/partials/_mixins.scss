@@ -1,0 +1,21 @@
+//
+// * All Rights Reserved
+// * This software is proprietary information of
+// * Intelligent Sense
+// * Use is subject to license terms.
+// * Filename: _mixins.scss
+//
+
+// *
+// * Author:      wugalde@intelligentsense.com
+// * Date:        12/03/2016
+// * Description: General partial.
+// 
+
+@mixin borderRadius($border : 5px) {
+	-webkit-border-radius: $border; 
+	-moz-border-radius: $border; 
+	-o-border-radius: $border; 
+	-ms-border-radius: $border; 
+	border-radius: $border; 
+}
