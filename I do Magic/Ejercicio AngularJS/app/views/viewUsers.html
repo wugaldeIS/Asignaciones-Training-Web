@@ -1,0 +1,35 @@
+<!--
+	All Rights Reserved
+	This software is proprietary information of
+	Intelligent Sense
+	Use is subject to license terms.
+	Filename: viewUsers.html
+-->
+<div ng-controller="usersController">
+	<div class="buttons"><button id="letterButton" ng-click="filterUsers(letter)" ng-repeat="letter in auxLetters">{{letter}}</button></div>
+	<div class="user-container" ng-repeat="user in auxUsers">
+		<div class="user-image">
+			<img ng-src="{{user.Profile}}" />
+		</div>
+		<div class="user-information">
+			<table>
+				<tr>
+					<td>Name:</td>
+					<td>{{user.Name}}</td>
+				</tr>
+				<tr>
+					<td>Tweets:</td>
+					<td>{{user.Tweets}}</td>
+				</tr>
+				<tr>
+					<td>Followers:</td>
+					<td>{{user.Followers}}</td>
+				</tr>
+				<tr>
+					<td>Retweets:</td>
+					<td>{{user.ReTweets}}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>

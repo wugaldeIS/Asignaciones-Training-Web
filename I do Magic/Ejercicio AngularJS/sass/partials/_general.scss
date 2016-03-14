@@ -1,0 +1,75 @@
+//
+// * All Rights Reserved
+// * This software is proprietary information of
+// * Intelligent Sense
+// * Use is subject to license terms.
+// * Filename: _general.scss
+//
+
+// *
+// * Author:      wugalde@intelligentsense.com
+// * Date:        13/03/2016
+// * Description: General partial.
+// 
+
+/* ===================
+    ALL: Variables
+   =================== */
+$black : #000;
+
+body {
+    width: 100%;
+
+    .container {
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+
+        .buttons {
+            width:100%;
+            margin: 15px 0;
+            padding: 10px;
+
+            #letterButton
+            {
+                float: left;
+                margin-right: 10px;
+            }
+        }
+
+        .user-container {
+            border: 2px solid $black;
+            margin: 20px 0;
+            padding: 5px;
+            overflow: hidden;
+
+            
+            @include borderRadius(2px);
+            
+            .user-image {
+                
+                width: 100px;
+                height: 80%;
+                float: left;    
+
+                img {
+                    @include borderRadius(5px);
+                    height: 130px;
+                    width: 100px;
+                }
+            }
+
+            .user-information {
+                margin-left: 5px;
+                padding: 10px 0;
+                width: 60%;
+                height: 80%;
+                float: left;
+
+                td {
+                    padding: 2px 10px 2px 10px; 
+                }
+            }
+        }   
+    }
+}
